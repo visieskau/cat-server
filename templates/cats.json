@@ -1,0 +1,18 @@
+{
+  "cats": [
+    {
+      "name": "Connie",
+      "age": 4
+    },
+    {
+      "name": "Panienka",
+      "age": 3
+    }
+  ],
+  "dog":"Cana",
+  "human": "Patito",
+  "osa" : {
+    "name": "Mis",
+    "job": "Python Test Master"
+  }
+}
