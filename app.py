@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, Response
 app = Flask(__name__)
 
 
@@ -8,7 +8,7 @@ def status():
 
 @app.route('/api/koty', methods=['GET'])
 def json_zahardko():
-    return render_template('cats.json')
+    return Response(response=render_template('cats.json'), mimetype="application/json")
 
 if __name__ == "__main__":
     app.run()
