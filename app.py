@@ -1,4 +1,5 @@
 from flask import Flask, render_template, Response
+from animals import Cat
 app = Flask(__name__)
 
 
