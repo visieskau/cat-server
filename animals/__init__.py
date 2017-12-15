@@ -4,4 +4,4 @@ class Cat:
         self.age = age
 
     def greet(self):
-        return "Hello, my name is " + self.name + ". I am " + self.age + " years old."
+        return "Hello, my name is " + self.name + ". I am " + str(self.age) + " years old."
