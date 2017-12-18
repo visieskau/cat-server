@@ -1,4 +1,6 @@
-from flask import Flask, render_template, Response
+from flask import Flask, render_template, Response, jsonify
+
+
 from animals import Cat
 app = Flask(__name__)
 
@@ -7,9 +9,13 @@ app = Flask(__name__)
 def status():
     return render_template('dzialam.html')
 
+
 @app.route('/api/koty', methods=['GET'])
-def json_zahardko():
-    return Response(response=render_template('cats.json'), mimetype="application/json")
+def cats_to_json():
+    tina = Cat(name="Tina", age=5)
+    klakier = Cat(name="Klakier", age=2)
+    return jsonify(tina.__dict__, klakier.__dict__)
+
 
 if __name__ == "__main__":
     app.run()
