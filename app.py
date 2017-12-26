@@ -1,4 +1,4 @@
-from flask import Flask, render_template, Response, jsonify
+from flask import Flask, render_template, jsonify
 
 
 from animals import Cat
@@ -14,7 +14,8 @@ def status():
 def cats_to_json():
     tina = Cat(name="Tina", age=5)
     klakier = Cat(name="Klakier", age=2)
-    return jsonify(tina.__dict__, klakier.__dict__)
+    rudy = Cat(name="Rudy", age=1)
+    return jsonify(tina.__dict__, klakier.__dict__, rudy.__dict__)
 
 
 if __name__ == "__main__":
